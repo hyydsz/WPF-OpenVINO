@@ -10,6 +10,13 @@
 * 点击`打开图片`选择图片或者视频<br>
 * 点击`开始识别`即可
 
+## 部署教程
+```shell
+git clone https://github.com/hyydsz/WPF-OpenVINO
+```
+- Visual studio: 2022
+- OpenVINO-CSharp-API: 2023
+
 ## 展示
 ![image](https://github.com/hyydsz/WPF-OpenVINO/blob/master/demo/main.png)
 ![image](https://github.com/hyydsz/WPF-OpenVINO/blob/master/demo/demo1.png)
