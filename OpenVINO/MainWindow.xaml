@@ -1,0 +1,80 @@
+﻿<Window x:Class="OpenVINO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OpenVINO" Height="600" Width="1000" SizeChanged="Window_SizeChanged" StateChanged="Window_StateChanged" Closing="Window_Closing"
+        MinHeight="600" MinWidth="1000">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="5" UseAeroCaptionButtons="False" CaptionHeight="0" NonClientFrameEdges="None" CornerRadius="20" />
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ContentControl Grid.Row="0" VerticalAlignment="Top" MouseDown="Window_OnDrag" Template="{DynamicResource WindowStyle_PART_Title}">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <ToggleButton Style="{DynamicResource TitleToggleButton}" Content="{DynamicResource Speed}" CommandParameter="Speed" Click="TitleBarClick">
+                    <ToggleButton.ToolTip>
+                        <ToolTip Style="{DynamicResource ToolTipStyle}" Content="性能模式"/>
+                    </ToggleButton.ToolTip>
+                </ToggleButton>
+
+                <Button Style="{DynamicResource TitleBarButtonStyle}" Content="{DynamicResource Minimize}" CommandParameter="Minimize" Click="TitleBarClick"/>
+                <Button Style="{DynamicResource TitleBarButtonStyle}" Content="{DynamicResource Maximize}" CommandParameter="Maximize" Click="TitleBarClick" x:Name="MaximizeButton"/>
+                <Button Style="{DynamicResource CloseButtonStyle}" Content="{DynamicResource Close}" CommandParameter="Close" Click="TitleBarClick"/>
+            </StackPanel>
+        </ContentControl>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Border Background="#FFF" Margin="10" CornerRadius="25">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#000" Opacity="0.5" BlurRadius="10" ShadowDepth="0"/>
+                    </Border.Effect>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Width="360" x:Name="Beform"/>
+                        <Image Width="360" x:Name="After"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Vertical" Margin="10 10 10 0">
+                        <Button Style="{DynamicResource WindowButtonStyle}" Margin="0 0 0 10" Height="30" Click="OpenImage">打开图片</Button>
+                        <Button Style="{DynamicResource WindowButtonStyle}" Height="30" Click="Launch">开始识别</Button>
+                    </StackPanel>
+
+                    <RichTextBox x:Name="ConsoleBox" Style="{DynamicResource RichTextBoxStyle}" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                                 IsReadOnly="True" AutoWordSelection="False" SelectionBrush="Black" SelectionTextBrush="Transparent" Height="450" Margin="10">
+                        <FlowDocument>
+                            <Paragraph/>
+                        </FlowDocument>
+                    </RichTextBox>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Border x:Name="MoveMessageBox" Grid.Row="1" Opacity="0" Background="White" CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False">
+            <Border.Effect>
+                <DropShadowEffect Color="#000" Opacity="0.4" BlurRadius="5" ShadowDepth="0"/>
+            </Border.Effect>
+
+            <TextBlock TextWrapping="Wrap" FontSize="20" Margin="15 10 15 10"/>
+
+            <Border.RenderTransform>
+                <TranslateTransform/>
+            </Border.RenderTransform>
+        </Border>
+    </Grid>
+
+</Window>
