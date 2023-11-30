@@ -4,3 +4,6 @@
 ## 预设
 内置了TinyPose, PicoDet, Yolov8S模型
 人体姿态，目标识别，物体识别
+
+## 展示
+![image](https://github.com/hyydsz/WPF-OpenVINO/demo/main.png)
