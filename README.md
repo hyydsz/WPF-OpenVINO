@@ -7,4 +7,4 @@
 
 ## 展示
 ![image](https://github.com/hyydsz/WPF-OpenVINO/blob/master/demo/main.png)
-![image](https://github.com/hyydsz/WPF-OpenVINO/demo/demo1.png)
+![image](https://github.com/hyydsz/WPF-OpenVINO/blob/master/demo/demo1.png)
