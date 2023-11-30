@@ -1,7 +1,5 @@
 # WPF-OpenVINO
-使用OpenVINO制作的图片推理程序<br>
-[OpenVINO-CSharp](https://github.com/guojin-yan/OpenVINO-CSharp-API/tree/csharp3.0)<br>
-[Csharp_deploy_Yolov8](https://github.com/guojin-yan/Csharp_deploy_Yolov8)
+使用OpenVINO制作的图片推理程序
 
 ## 预设
 内置了TinyPose, PicoDet, Yolov8S模型
@@ -10,3 +8,7 @@
 ## 展示
 ![image](https://github.com/hyydsz/WPF-OpenVINO/blob/master/demo/main.png)
 ![image](https://github.com/hyydsz/WPF-OpenVINO/blob/master/demo/demo1.png)
+
+## 借鉴名单
+[OpenVINO-CSharp](https://github.com/guojin-yan/OpenVINO-CSharp-API/tree/csharp3.0)<br>
+[Csharp_deploy_Yolov8](https://github.com/guojin-yan/Csharp_deploy_Yolov8)
