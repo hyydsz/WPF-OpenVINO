@@ -1,9 +1,14 @@
 # WPF-OpenVINO
-使用OpenVINO制作的图片推理程序
+使用OpenVINO制作的(图片/视频)推理程序
 
 ## 预设
 内置了TinyPose, PicoDet, Yolov8S模型
 人体姿态，目标识别，物体识别
+
+## 使用教程
+*1, 在exe根目录创建model文件夹将github上的模型文件拖入进去
+*2, 点击*打开图片*选择图片或者视频
+*3, 点击*开始识别*即可
 
 ## 展示
 ![image](https://github.com/hyydsz/WPF-OpenVINO/blob/master/demo/main.png)
