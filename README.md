@@ -6,4 +6,4 @@
 人体姿态，目标识别，物体识别
 
 ## 展示
-![image](https://github.com/hyydsz/WPF-OpenVINO/demo/main.png)
+![image](https://github.com/hyydsz/WPF-OpenVINO/blob/master/demo/main.png)
